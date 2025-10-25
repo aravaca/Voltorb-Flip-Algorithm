@@ -292,7 +292,7 @@ def print_board(opened: Dict[Coord, Val]):
         print(" ".join(str(opened[(r,c)]) if (r,c) in opened else "·" for c in range(N)))
 
 def interactive_game():
-    print("=== Voltorb Flip 보조 (P(0) 최소 추천) ===")
+    print("=== Voltorb Flip Optimizer (P(0) 최소 추천) ===")
     print("행/열 합과 폭탄 수를 입력하세요.")
     row_sums = list(map(int, input("행 합 5개: ").split()))
     row_bombs = list(map(int, input("행 폭탄 5개: ").split()))
