@@ -1,4 +1,4 @@
-# Voltorb Flip Assistant
+# Voltorb Flip Optimizer
 
 A small helper for the 5x5 Voltorb Flip puzzle that enumerates all valid boards given row/column sums and bomb counts, computes exact posterior probabilities P(0/1/2/3) and expected values (EV) for each unopened cell, and recommends the cell with the lowest probability of being a bomb.
 
