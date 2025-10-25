@@ -40,4 +40,4 @@ Contributing
 - Improvements welcome: add a small GUI, caching of intermediate results, or optimized pruning heuristics.
 
 License
-- MIT (or choose your preferred license).
+- MIT 
