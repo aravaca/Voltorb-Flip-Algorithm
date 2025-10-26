@@ -49,6 +49,7 @@ Grid = List[List[Val]]
 
 # debug flag
 DEBUG = False
+OPTIONS = True
 
 # ---------------------------
 # 열 프루닝용 보조 (부분 누적 -> 가능한 합 구간)
@@ -316,8 +317,8 @@ def interactive_game():
         print(f"\n가능한 전체 보드 수: {nsol}")
         # 가장 안전한 상위 5개 참고 출력
         top_safe = sorted(post.items(), key=lambda kv: (kv[1]["p"][0], -kv[1]["ev"]))[:5]
-        if DEBUG:
-            print("\n[Top Safe (min P0)]")
+        if OPTIONS:
+            print("\n[가장 안전한 추천 칸 상위 5개]")
             for (rc, st) in top_safe:
                 p = st["p"]
                 print(f" {rc}: P0={p[0]:.3f} | EV={st['ev']:.3f} | P1={p[1]:.3f}, P2={p[2]:.3f}, P3={p[3]:.3f}")
@@ -330,8 +331,8 @@ def interactive_game():
         print(f"\n[{step+1}단계] 추천 칸: {best_rc} | 폭탄일 확률={st['p'][0]:.0%}, 기대값={st['ev']:.2f}")
 
         s = input("그 칸의 실제 값(0/1/2/3), q로 종료: ").strip().lower()
-        if s.lower() == 'q':
-            print("사용자 종료."); break
+        if s.lower() == 'q' or s == 'ㅂ':
+            print("🏆 모든 동전 획득!"); break
         try:
             v = int(s)
             if v not in (0,1,2,3): raise ValueError
@@ -342,7 +343,7 @@ def interactive_game():
         step += 1
 
         if v == 0:
-            print("💣 폭탄! 게임 오버."); break
+            print("💣 찌리리공! 게임 오버."); break
         # 성공 여부(모든 2/3 회수)는 사용자 판단
 
 if __name__ == "__main__":
