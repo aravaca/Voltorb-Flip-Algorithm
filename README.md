@@ -26,9 +26,9 @@ Follow prompts to enter 5 row sums, 5 row bomb counts, 5 column sums, and 5 colu
 
 Constraints (mathematical)
 - Total sum constraint: 
-$ \sum_{r=0}^{4} \text{row\_sums}[r] = \sum_{c=0}^{4} \text{col\_sums}[c] $
+$` \sum_{r=0}^{4} \text{row\_sums}[r] = \sum_{c=0}^{4} \text{col\_sums}[c] `$
 - Total bombs constraint: 
-$ \sum_{r=0}^{4} \text{row\_bombs}[r] = \sum_{c=0}^{4} \text{col\_bombs}[c] $
+$` \sum_{r=0}^{4} \text{row\_bombs}[r] = \sum_{c=0}^{4} \text{col\_bombs}[c] `$
 - Each non-bomb cell ∈ {1,2,3} so per-row/column sums must be achievable given non-bomb counts.
 
 Notes on implementation
