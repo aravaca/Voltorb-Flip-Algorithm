@@ -4,7 +4,7 @@ A small helper for the 5x5 Voltorb Flip puzzle that enumerates all valid boards 
 
 Key features
 - Exact enumeration of all boards consistent with provided constraints.
-- Per-cell posteriors and EV calculation.
+- Per-cell posteriors and EV calculation using DFS and pruning.
 - Recommends the safest next cell (min P(0), tiebreaker: max EV).
 - Interactive CLI to step through a game.
 
